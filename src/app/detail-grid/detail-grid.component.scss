@@ -1,0 +1,13 @@
+:host {
+  display: inline-block;
+  width: 100%;
+  height: auto;
+  border-left: 4px solid blue;
+  background-color: lightblue;
+  --ag-header-cell-hover-background-color: yellow;
+}
+
+.detail-grid {
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+}

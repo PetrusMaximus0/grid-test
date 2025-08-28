@@ -1,1 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+  min-height: 100%;
+  background-color: black;
+  height: 100%;
+}
+
+.ag-center-cols-viewport {
+  min-height: auto !important;
+}
+
+.ag-cell.ag-column-first[col-id="mission"][aria-expanded="true"] {
+ border-left: 4px solid blue;
+}
+
+.ag-cell.ag-column-first[col-id="euros"][aria-expanded="true"] {
+  border-left: 4px solid blue;
+}
+
+.ag-details-row {
+  border-left: 4px solid blue;
+  --ag-spacing: 4px;
+}
+
+.ag-header-cell{
+  background-color: lightgreen;
+}
+

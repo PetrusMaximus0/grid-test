@@ -17,3 +17,7 @@ body{
 .ag-cell.ag-column-first[col-id="euros"][aria-expanded="true"] {
   border-left: 4px solid lightgreen;
 }
+
+.master-grid {
+  --ag-header-background-color: lightsalmon;
+}

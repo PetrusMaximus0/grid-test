@@ -52,7 +52,7 @@ export class AppComponent {
 
   constructor(){
     effect(()=> {
-      console.log(this.rowData())
+     // console.log(this.rowData())
     })
   }
 

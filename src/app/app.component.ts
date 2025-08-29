@@ -55,4 +55,6 @@ export class AppComponent {
       console.log(this.rowData())
     })
   }
+
+  protected readonly DetailGridComponent = DetailGridComponent;
 }

@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {AgGridAngular, ICellRendererAngularComp} from "ag-grid-angular";
-import {ColDef, GridOptions, ICellRendererParams, IDetailCellRendererParams, themeAlpine} from 'ag-grid-community';
+import {ColDef, GridOptions, ICellRendererParams, IDetailCellRendererParams} from 'ag-grid-community';
 
 @Component({
   selector: 'app-detail-grid',
@@ -22,11 +22,6 @@ export class DetailGridComponent implements ICellRendererAngularComp{
   }
   // Row Data: The data to be displayed.
   rowData = [
-    { euros: "euros",  dollars: "dollars"  },
-    { euros: "euros",  dollars: "dollars"  },
-    { euros: "euros",  dollars: "dollars"  },
-    { euros: "euros",  dollars: "dollars"  },
-    { euros: "euros",  dollars: "dollars"  },
     { euros: "euros",  dollars: "dollars"  },
     { euros: "euros",  dollars: "dollars"  },
     { euros: "euros",  dollars: "dollars"  },
@@ -63,7 +58,23 @@ export class DetailGridComponent implements ICellRendererAngularComp{
     detailRowAutoHeight: true,
     masterDetail: true,
     detailCellRendererParams: {
+      template: params=> {
+        return `
+              <div style="
+                padding-left: 1rem;
+                padding-bottom: 1rem;
+                border-left: 4px solid lightgreen;
+                background-color: lightblue;
+              " class="grid-deet ag-details-row ag-details-row-auto-height">
+                  <div data-ref="eDetailGrid" class="ag-details-grid ag-details-grid-auto-height"/>
+              </div>
+          `;
+      },
       detailGridOptions: {
+        rowHeight: 24,
+        defaultColDef: {
+          flex: 1
+        },
         columnDefs: [
           {
             headerName: "DETAILOOOR",

@@ -2,11 +2,11 @@
   // Necessary to be able to add margins and paddings
   display: inline-block;
   width: 100%;
-  border-left: 4px solid lightgreen;
+  border-left: 4px solid var(--expanded-detail-one);
   background-color: lightblue;
   // Depends on the display: inline-block from :host
   .detail-grid {
     margin: 0 1rem 1rem;
-    --ag-header-background-color: lightgreen;
+    --ag-header-background-color: var(--expanded-detail-one);
   }
 }

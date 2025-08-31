@@ -5,17 +5,22 @@ body{
   height: 100%;
 }
 
+:root {
+  --expanded-detail-one : dodgerblue;
+  --expanded-detail-two : forestgreen;
+}
+
 // Removes the extra spacing when rows don't fill the minimum default space
 .ag-center-cols-viewport {
   min-height: 32px !important;
 }
 
 .ag-cell.ag-column-first[col-id="mission"][aria-expanded="true"] {
- border-left: 4px solid lightgreen;
+ border-left: 4px solid var(--expanded-detail-one);
 }
 
 .ag-cell.ag-column-first[col-id="euros"][aria-expanded="true"] {
-  border-left: 4px solid lightgreen;
+  border-left: 4px solid var(--expanded-detail-two);
 }
 
 .master-grid {

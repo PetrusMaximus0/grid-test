@@ -22,20 +22,21 @@ export class DetailDetailGridComponent implements ICellRendererAngularComp{
   }
   // Row Data: The data to be displayed.
   rowData = [
-    { euros: "euros",  dollars: "dollars"  },
-    { euros: "euros",  dollars: "dollars"  },
+    { colors: "Red",  texture: "soft"  },
+    { colors: "Blue",  texture: "rough"  },
+    { colors: "Green",  texture: "medium"  },
+    { colors: "Blue",  texture: "very soft"  },
   ]
 
   // Column Definitions: Defines the columns to be displayed.
   colDefs: ColDef[] = [
     {
-      headerName: "EXPANDOOOR",
-      field: "euros",
-      cellRenderer: 'agGroupCellRenderer'
+      headerName: "Color",
+      field: "colors",
     },
     {
-      headerName: "HEADER DUDE",
-      field: "dollars",
+      headerName: "Texture",
+      field: "texture",
     },
   ];
 
